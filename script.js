@@ -16,7 +16,7 @@ function getComputerChoice () {
 
 function getHumanChoice () {
     choice = prompt("Type rock, paper or scissors").toLowerCase();
-/*     switch (choice) {
+     switch (choice) {
         case "rock":
             return "You selected rock"
             break;
@@ -29,7 +29,7 @@ function getHumanChoice () {
         default:
             "Please select rock, paper or scissors"
             break;
-    } */
+    }
    return choice;
 }
 
