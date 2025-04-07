@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost';
+}
+
+body {
+    background-color: #BCE3FF
+}
+
+.jost-main {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+header {
+    background-color: #0D2333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.title-subtext {
+    font-size: 16px;
+}
+
+.body-container {
+    background-color: #BCE3FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 51px;
+}
+
+.button-container {
+    width: 531px;
+    height: 728px;
+    display: flex;
+    flex-direction: column;
+}
+
+.score-container {
+    width: 674px;
+    height: 728px;
+    background-color: #2f4f66;
+    border-radius: 12px;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 48px;
+    background-color: #AFC0CC;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 25px;
+}
+
+.game-button {
+    height: 531px;
+    width: 176px;
+}

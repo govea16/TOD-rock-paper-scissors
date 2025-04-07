@@ -15,8 +15,9 @@ function getComputerChoice () {
 }
 
 function getHumanChoice () {
-    choice = prompt("Type rock, paper or scissors").toLowerCase();
-     switch (choice) {
+    //choice = prompt("Type rock, paper or scissors").toLowerCase();
+    choice = arguments;
+/*      switch (choice) {
         case "rock":
             return "You selected rock"
             break;
@@ -29,7 +30,7 @@ function getHumanChoice () {
         default:
             "Please select rock, paper or scissors"
             break;
-    }
+    } */
    return choice;
 }
 
@@ -51,13 +52,22 @@ function playRound () {
 
 }
 
-function playGame () {
-    for (let i=0;i<5;i++) {
-        playRound();
-    }
-    return `Final Score: 
-Computer - ${computerScore}    
-You ${humanScore}`
-}
+// function playGame () {
+//     for (let i=0;i<5;i++) {
+//         playRound();
+//     }
+//     return `Final Score: 
+// Computer - ${computerScore}    
+// You ${humanScore}`
+// }
 
-console.log(playGame())
+const rockbtn = document.querySelector('#rock-btn');
+const paperbtn = document.getElementById('paper-btn');
+const scissorsbtn = document.getElementById('scissors-btn');
+
+rockbtn.addEventListener("click", () => {
+    let choice = 'rock';
+    getHumanChoice(choice);
+})
+
+//console.log(playGame())

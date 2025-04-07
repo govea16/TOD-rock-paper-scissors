@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script2.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>TOD | Rock Paper Scissors</title>
 </head>
 <body>
+    <header>
+        <h1 class="title">Rock Paper Scissors</h1>
+        <p class="title-subtext">The Odin Project Assignment</p>
+    </header>
+    <div class="body-container">
+        <div class="button-container">
+            <button id = "rock-btn game-btn">Rock <img src="./hand-back-fist-solid.svg" width="82" height="94"></button>
+            <button id = "paper-btn game-btn">Paper <img src="./hand-solid.svg" width="82" height="94"></button>
+            <button id = "scissors-btn game-btn">Scissors <img src="./hand-scissors-solid.svg" width="82" height="94"></button>
+            <button id = "reset-btn game-btn">Reset</button>
+        </div>
+        <div class="score-container">
+            <div class="computer-score">
+                <p>Computer:</p>
+            </div>
+            <div class="player-score">
+                <p>You:</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
