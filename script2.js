@@ -33,7 +33,7 @@ reset.addEventListener("click", () => {
     playGame(humanChoice);
 });
 
-
+/* CHANGE HERE */
 const gameScore = document.createElement('h3');
 gameScore.setAttribute('style', 'white-space: pre;');
 gameScore.textContent = "Your score: " + humanScore + "\r\n";
@@ -73,6 +73,8 @@ function playGame (humanChoice) {
         roundText.textContent = `${computer} beats ${humanChoice}. Computer wins :(`
         computerScore += 1;
     }
+
+    /*CHANGE HERE AS WELL*/
     gameScore.textContent = "Your score: " + humanScore + "\r\n";
     gameScore.textContent += "Computer score: " + computerScore;
 
