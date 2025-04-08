@@ -45,7 +45,7 @@ const roundBox = document.querySelector(".game-feedback");
 const roundText = document.createElement("p");
 roundText.style.fontWeight = "400";
 roundText.style.fontSize = "48px";
-roundText.textContent = "Choose a button below to start the game.";
+roundText.textContent = "Click a button below to start the game.";
 roundBox.appendChild(roundText);
 
 function playGame (humanChoice) {
