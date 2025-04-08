@@ -2,14 +2,8 @@ const rock = document.querySelector("#rock-btn");
 const paper = document.querySelector("#paper-btn");
 const scissors = document.querySelector("#scissors-btn");
 
-const title = document.querySelector(".title");
-const roundText = document.createElement('h2');
-roundText.style.color = 'pink';
-title.appendChild(roundText);
-
 let humanScore = 0;
 let computerScore = 0;
-
 
 
 rock.addEventListener("click", () => {
@@ -27,18 +21,32 @@ scissors.addEventListener("click", () => {
     playGame(humanChoice);
 })
 
-const reset = document.querySelector(".reset-button");
+const reset = document.querySelector("#reset-btn");
 reset.addEventListener("click", () => {
     const humanChoice = 'reset';
     playGame(humanChoice);
 });
 
-/* CHANGE HERE */
-const gameScore = document.createElement('h3');
-gameScore.setAttribute('style', 'white-space: pre;');
-gameScore.textContent = "Your score: " + humanScore + "\r\n";
-gameScore.textContent += "Computer score: " + computerScore;
-//title.appendChild(gameScore);
+const playerScoreBox = document.querySelector('.player-score');
+const displayedPlayerScore = document.createElement('h3');
+displayedPlayerScore.style.fontSize = "96px";
+displayedPlayerScore.style.fontWeight = "400";
+displayedPlayerScore.textContent = humanScore;
+playerScoreBox.appendChild(displayedPlayerScore);
+
+const computerScoreBox = document.querySelector('.computer-score');
+const displayedComputerScore = document.createElement('h3');
+displayedComputerScore.style.fontSize = "96px";
+displayedComputerScore.style.fontWeight = "400";
+displayedComputerScore.textContent = humanScore;
+computerScoreBox.appendChild(displayedComputerScore);
+
+const roundBox = document.querySelector(".game-feedback");
+const roundText = document.createElement("p");
+roundText.style.fontWeight = "400";
+roundText.style.fontSize = "48px";
+roundText.textContent = "Choose a button below to start the game.";
+roundBox.appendChild(roundText);
 
 function playGame (humanChoice) {
     if (humanChoice === 'reset') {
@@ -66,17 +74,19 @@ function playGame (humanChoice) {
         roundText.textContent = "Tie!";
     }
     else if (((humanChoice === 'rock') && (computer === 'scissors')) || ((humanChoice === 'scissors') && (computer === 'paper')) || ((humanChoice === 'paper') && (computer === 'rock'))) {
+        humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
         roundText.textContent = `${humanChoice} beats ${computer}. You win!`
         humanScore += 1;
     }
     else if (((computer === 'rock') && (humanChoice === 'scissors')) || ((computer === 'scissors') && (humanChoice === 'paper')) || ((computer === 'paper') && (humanChoice === 'rock'))) {
-        roundText.textContent = `${computer} beats ${humanChoice}. Computer wins :(`
+        computer = computer.charAt(0).toUpperCase() + computer.slice(1);
+        roundText.textContent = `${computer} beats ${humanChoice}. Computer wins.`
         computerScore += 1;
     }
 
     /*CHANGE HERE AS WELL*/
-    gameScore.textContent = "Your score: " + humanScore + "\r\n";
-    gameScore.textContent += "Computer score: " + computerScore;
+    displayedPlayerScore.textContent = humanScore;
+    displayedComputerScore.textContent = computerScore;
 
 
 
