@@ -84,7 +84,7 @@ function playGame (humanChoice) {
         computerScore += 1;
     }
 
-    /*CHANGE HERE AS WELL*/
+
     displayedPlayerScore.textContent = humanScore;
     displayedComputerScore.textContent = computerScore;
 
